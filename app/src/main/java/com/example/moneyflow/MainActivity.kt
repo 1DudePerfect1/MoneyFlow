@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var transactions : ArrayList<Transaction>
     private lateinit var transactionAdapter: TransactionAdapter
-    private lateinit var layoutMaanger : LinearLayoutManager
+    private lateinit var linearLayoutMaanger : LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,18 @@ class MainActivity : AppCompatActivity() {
 
         )
         transactionAdapter = TransactionAdapter(transactions)
-        layoutMaanger = LinearLayoutManager(this)
-        recycleview
+        linearLayoutMaanger = LinearLayoutManager(this)
+        recycleview.apply {
+            adapter = transactionAdapter
+            layoutManager = linearLayoutMaanger
+        }
     }
+        private fun updateDashboard(){
+            val totalAmount = transactions.map { it.amount }.sum()
+            val budgetAmount = transactions.filter { it.amount>0 }.map { it.amount }.sum()
+            val expenseAmount = totalAmount - budgetAmount
+            balance.text = "$ %.2f".format(totalAmount)
+            budgettext.text = "$ %.2f".format(budgetAmount)
+            expendstext.text = "$ %.2f".format(expenseAmount)
+        }
 }
