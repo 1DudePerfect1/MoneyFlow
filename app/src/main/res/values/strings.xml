@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">moneyFlow</string>
+    <string name="e">Email</string>
+    <string name="pass">Password</string>
+    <string name="signup">Sign up</string>
+    <string name="logredirecttext">Login, if you are already an user</string>
+    <string name="regredirecttext">Register, if you are not an user</string>
+    <string name="signin">Sign In</string>
+</resources>
