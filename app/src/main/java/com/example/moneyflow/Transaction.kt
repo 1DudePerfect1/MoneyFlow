@@ -1,5 +1,14 @@
 package com.example.moneyflow
 
-data class Transaction (val label: String, val amount: Double){
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "transactions")
+data class Transaction (
+    @PrimaryKey(autoGenerate = true) val id: Int,
+    val label: String,
+    val amount: Double
+    val description: String){
 
 }
