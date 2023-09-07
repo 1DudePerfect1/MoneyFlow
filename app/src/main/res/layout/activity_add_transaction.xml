@@ -63,7 +63,7 @@
                 android:drawableStart="@drawable/ic_money"
                 android:drawablePadding="12dp"
                 android:maxLines="1"
-                android:inputType="numberDecimal"
+                android:inputType="numberDecimal|numberSigned"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
