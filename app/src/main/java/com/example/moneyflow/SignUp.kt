@@ -40,7 +40,7 @@ class SignUp : AppCompatActivity() {
                 Toast.makeText(this,"Password are not matching",Toast.LENGTH_SHORT).show()
             }
             else{
-                Toast.makeText(this,"Froms are empty",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Forms are empty",Toast.LENGTH_SHORT).show()
             }
         }
         binding.loginredirect.setOnClickListener{

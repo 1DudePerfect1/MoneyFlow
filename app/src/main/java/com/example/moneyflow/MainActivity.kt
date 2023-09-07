@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         transactions = arrayListOf()
         transactionAdapter = TransactionAdapter(transactions)
-        linearLayoutMaanger = LinearLayoutManager(this)
+        linearLayoutMaanger = LinearLayoutManager(this) //для отображения ресайкл
 
         db = Room.databaseBuilder(this, AppDatabase::class.java, "transactions").build()
         recycleview.apply {
